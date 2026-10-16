@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Booking Queue - Team A</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="queue.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="logo">
+            TEAM A
+        </div>
+
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="booking.html">New Booking</a>
+            <a href="queue.html" class="active">Queue</a>
+            <a href="scheduler.html">Scheduler</a>
+        </nav>
+
+    </header>
+
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- TITLE -->
+        <section class="page-title">
+
+            <h1>Booking Queue</h1>
+
+            <p>
+                Manage booking requests waiting for scheduling.
+            </p>
+
+        </section>
+
+
+        <!-- QUEUE CONTROLS -->
+        <section class="queue-controls">
+
+            <div>
+
+                <label for="providerId">
+                    Provider ID
+                </label>
+
+                <input
+                    type="text"
+                    id="providerId"
+                    value="PROV001"
+                >
+
+            </div>
+
+
+            <div>
+
+                <label for="queueType">
+                    Queue Type
+                </label>
+
+                <select id="queueType">
+
+                    <option value="FCFS">
+                        FIFO / FCFS
+                    </option>
+
+                    <option value="PRIORITY">
+                        Priority Queue
+                    </option>
+
+                    <option value="EARLIEST-FIT">
+                        Earliest-Fit
+                    </option>
+
+                    <option value="URGENCY-WEIGHTED">
+                        Urgency-Weighted
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <button
+                id="refreshQueueBtn">
+
+                Refresh Queue
+
+            </button>
+
+        </section>
+
+
+        <!-- STATISTICS -->
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <span>
+                    Total Requests
+                </span>
+
+                <strong id="totalRequests">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>
+                    Waiting
+                </span>
+
+                <strong id="waitingRequests">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>
+                    Scheduled
+                </span>
+
+                <strong id="scheduledRequests">
+                    0
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- CURRENT QUEUE -->
+        <section class="queue-box">
+
+            <div class="queue-header">
+
+                <div>
+
+                    <h2>
+                        Current Queue
+                    </h2>
+
+                    <p>
+                        Requests are processed in queue order.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="add-button"
+                    onclick="window.location.href='booking.html'">
+
+                    + Add Booking
+
+                </button>
+
+            </div>
+
+
+            <!-- TABLE -->
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Position</th>
+
+                            <th>Request ID</th>
+
+                            <th>Customer</th>
+
+                            <th>Service</th>
+
+                            <th>Priority</th>
+
+                            <th>Status</th>
+
+                            <th>Policy</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="queueTable">
+
+                        <tr>
+
+                            <td
+                                colspan="7"
+                                class="no-result">
+
+                                Loading queue...
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- HOW QUEUE WORKS -->
+        <section class="how-it-works">
+
+            <h2>
+                How the Queue Works
+            </h2>
+
+            <p>
+                New booking requests are added to the queue.
+                The scheduler processes requests according
+                to the selected scheduling policy.
+            </p>
+
+
+            <div class="process">
+
+                <div class="process-step">
+
+                    <b>1</b>
+
+                    <span>
+                        Booking Request
+                    </span>
+
+                </div>
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+
+                <div class="process-step">
+
+                    <b>2</b>
+
+                    <span>
+                        Added to Queue
+                    </span>
+
+                </div>
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+
+                <div class="process-step">
+
+                    <b>3</b>
+
+                    <span>
+                        Scheduler
+                    </span>
+
+                </div>
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+
+                <div class="process-step">
+
+                    <b>4</b>
+
+                    <span>
+                        Scheduled
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            Team A Scheduling Engine
+        </p>
+
+        <span>
+            System Online ●
+        </span>
+
+    </footer>
+
+
+    <script src="queue.js"></script>
+
+</body>
+
+</html>

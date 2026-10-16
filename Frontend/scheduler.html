@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Scheduler - Team A</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scheduler.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="logo">
+            TEAM A
+        </div>
+
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="queue.html">Queue</a>
+            <a href="scheduler.html" class="active">Scheduler</a>
+        </nav>
+
+    </header>
+
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- TITLE -->
+        <section class="page-title">
+
+            <h1>Scheduler</h1>
+
+            <p>
+                Select a queue type and scheduling policy.
+            </p>
+
+        </section>
+
+
+        <!-- SCHEDULER SETTINGS -->
+        <section class="scheduler-box">
+
+            <h2>Scheduling Settings</h2>
+
+            <p class="description">
+                Choose how booking requests should be processed.
+            </p>
+
+
+            <div class="settings">
+
+                <!-- PROVIDER -->
+                <div class="setting">
+
+                    <label for="providerId">
+                        Provider ID
+                    </label>
+
+                    <input
+                        type="text"
+                        id="providerId"
+                        value="PROV001"
+                        placeholder="Enter Provider ID"
+                    >
+
+                </div>
+
+
+                <!-- QUEUE TYPE -->
+                <div class="setting">
+
+                    <label for="queueType">
+                        Queue Type
+                    </label>
+
+                    <select id="queueType">
+
+                        <option value="FIFO">
+                            FIFO Queue
+                        </option>
+
+                        <option value="PRIORITY">
+                            Priority Queue
+                        </option>
+
+                        <option value="CIRCULAR">
+                            Circular Queue
+                        </option>
+
+                        <option value="HEAP">
+                            Heap
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- POLICY -->
+                <div class="setting">
+
+                    <label for="policy">
+                        Scheduling Policy
+                    </label>
+
+                    <select id="policy">
+
+                        <option value="FCFS">
+                            FCFS
+                        </option>
+
+                        <option value="EARLIEST-FIT">
+                            Earliest-Fit
+                        </option>
+
+                        <option value="PRIORITY">
+                            Priority
+                        </option>
+
+                        <option value="URGENCY-WEIGHTED">
+                            Urgency-Weighted
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- RUN BUTTON -->
+            <button
+                class="run-button"
+                id="runSchedulerBtn">
+
+                Run Scheduler
+
+            </button>
+
+        </section>
+
+
+        <!-- RESULT -->
+        <section class="result-box">
+
+            <div class="result-header">
+
+                <div>
+
+                    <h2>
+                        Scheduling Result
+                    </h2>
+
+                    <p id="resultMessage">
+                        Scheduler has not been run yet.
+                    </p>
+
+                </div>
+
+                <span
+                    id="resultStatus"
+                    class="status-badge">
+
+                    Not Started
+
+                </span>
+
+            </div>
+
+
+            <!-- RESULT TABLE -->
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Position
+                            </th>
+
+                            <th>
+                                Request
+                            </th>
+
+                            <th>
+                                Customer
+                            </th>
+
+                            <th>
+                                Priority
+                            </th>
+
+                            <th>
+                                Scheduled Time
+                            </th>
+
+                            <th>
+                                State
+                            </th>
+
+                            <th>
+                                Policy
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="resultTable">
+
+                        <tr>
+
+                            <td
+                                colspan="7"
+                                class="no-result">
+
+                                Click "Run Scheduler"
+                                to generate the schedule.
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- SIMPLE EXPLANATION -->
+        <section class="explanation">
+
+            <h2>
+                Scheduling Process
+            </h2>
+
+            <div class="process">
+
+                <div class="process-step">
+
+                    <b>1</b>
+
+                    <span>
+                        Get Queue
+                    </span>
+
+                </div>
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+
+                <div class="process-step">
+
+                    <b>2</b>
+
+                    <span>
+                        Select Policy
+                    </span>
+
+                </div>
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+
+                <div class="process-step">
+
+                    <b>3</b>
+
+                    <span>
+                        Run Algorithm
+                    </span>
+
+                </div>
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+
+                <div class="process-step">
+
+                    <b>4</b>
+
+                    <span>
+                        Generate Schedule
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            Team A Scheduling Engine
+        </p>
+
+        <span>
+            System Online ●
+        </span>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="scheduler.js"></script>
+
+</body>
+
+</html>

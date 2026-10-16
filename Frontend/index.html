@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Team A - Scheduling System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <div class="logo">
+            TEAM A
+        </div>
+
+        <nav>
+            <a href="index.html" class="active">Dashboard</a>
+            <a href="queue.html">Queue</a>
+            <a href="scheduler.html">Scheduler</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Welcome -->
+        <section class="welcome">
+
+            <h1>
+                Scheduling System
+            </h1>
+
+            <p>
+                Booking Queue & Scheduling Dashboard
+            </p>
+
+        </section>
+
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="card">
+
+                <h3>
+                    Total Requests
+                </h3>
+
+                <p id="totalRequests">
+                    8
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    Waiting
+                </h3>
+
+                <p id="waitingRequests">
+                    5
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    Scheduled
+                </h3>
+
+                <p id="scheduledRequests">
+                    3
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Main Actions -->
+        <section class="actions">
+
+            <div class="action-card">
+
+                <h2>
+                    Booking Queue
+                </h2>
+
+                <p>
+                    View and manage booking requests
+                    waiting in the queue.
+                </p>
+
+                <button onclick="openQueue()">
+                    Open Queue
+                </button>
+
+            </div>
+
+
+            <div class="action-card">
+
+                <h2>
+                    Scheduler
+                </h2>
+
+                <p>
+                    Select a scheduling policy and
+                    generate appointment order.
+                </p>
+
+                <button onclick="openScheduler()">
+                    Open Scheduler
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Team Information -->
+        <section class="info">
+
+            <h2>
+                Team A Responsibilities
+            </h2>
+
+            <ul>
+
+                <li>
+                    Manage booking requests
+                </li>
+
+                <li>
+                    Maintain the scheduling queue
+                </li>
+
+                <li>
+                    Apply scheduling policies
+                </li>
+
+                <li>
+                    Calculate queue position
+                </li>
+
+            </ul>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            Team A Scheduling Engine
+        </p>
+
+        <span>
+            System Online 
+        </span>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

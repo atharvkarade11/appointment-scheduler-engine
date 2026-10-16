@@ -1,0 +1,174 @@
+/* ==========================================
+   TEAM A - BOOKING PAGE
+========================================== */
+
+.booking-box,
+.booking-result {
+
+    background: white;
+
+    border: 1px solid #e1e5eb;
+
+    border-radius: 12px;
+
+    padding: 28px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+
+}
+
+
+.booking-box h2,
+.booking-result h2 {
+
+    margin-top: 0;
+
+}
+
+
+.description {
+
+    color: #666;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* FORM */
+
+#bookingForm {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+}
+
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.form-group label {
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+
+}
+
+
+.form-group input,
+.form-group select {
+
+    padding: 12px;
+
+    border: 1px solid #d5d9df;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    outline: none;
+
+}
+
+
+.form-group input:focus,
+.form-group select:focus {
+
+    border-color: #3155c6;
+
+}
+
+
+/* BUTTON */
+
+.booking-button {
+
+    grid-column: 1 / -1;
+
+    width: 200px;
+
+    padding: 13px 20px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #3155c6;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+}
+
+
+.booking-button:hover {
+
+    opacity: 0.9;
+
+}
+
+
+/* RESULT */
+
+.booking-result {
+
+    min-height: 100px;
+
+}
+
+
+.success {
+
+    padding: 15px;
+
+    border-radius: 6px;
+
+    background: #eaf7ee;
+
+}
+
+
+.error {
+
+    padding: 15px;
+
+    border-radius: 6px;
+
+    background: #fdecec;
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    #bookingForm {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .booking-button {
+
+        width: 100%;
+
+    }
+
+}
